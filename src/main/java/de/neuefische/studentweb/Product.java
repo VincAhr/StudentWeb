@@ -5,10 +5,14 @@ import java.util.UUID;
 public class Product {
 
     private final String id;
-    private final String name;
+    private String name;
 
-    public Product(String name) {
+    public Product(String name, String s) {
         this.name = name;
+        this.id = UUID.randomUUID().toString();
+    }
+
+    public Product() {
         this.id = UUID.randomUUID().toString();
     }
 
@@ -20,6 +24,10 @@ public class Product {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -27,5 +35,6 @@ public class Product {
                 ", name='" + name + '\'' +
                 '}';
     }
+
 }
 

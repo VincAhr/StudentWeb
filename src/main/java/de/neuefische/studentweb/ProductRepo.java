@@ -1,14 +1,17 @@
 package de.neuefische.studentweb;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.Collection;
 import java.util.HashMap;
 
+
+@Repository
 public class ProductRepo {
 
-    private HashMap<String, Product> allMyProducts;
+    private HashMap<String, Product> allMyProducts = new HashMap<>();
 
     public ProductRepo() {
-        allMyProducts = new HashMap<>();
     }
 
     public Collection<Product> list(){
